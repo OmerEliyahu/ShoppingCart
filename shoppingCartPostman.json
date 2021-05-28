@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "94279dd7-0c90-485a-a959-a034e03ecc9f",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createItem",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Bamba\",\r\n    \"price\": 5.00,\r\n    \"image\": \"\",\r\n    \"description\": \"Bamba\",\r\n    \"discounts\": [0.5]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/items/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"items",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createShoppingCart",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"60b1587607ec1f1194b7c10b\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/shoppingCarts/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"shoppingCarts",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getItems",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/items/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"items",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getItem",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/items/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"items",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateItem",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Test\",\r\n    \"price\": 6.00,\r\n    \"image\": \"\",\r\n    \"description\": \"Test\",\r\n    \"discounts\": [0.6]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/items/60aff13f7537b446b8be9602",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"items",
+						"60aff13f7537b446b8be9602"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addDiscount",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"discount\": 0.15\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/items/addDiscount/60aff13f7537b446b8be9602",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"items",
+						"addDiscount",
+						"60aff13f7537b446b8be9602"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeOldestDiscount",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/items/removeOldestDiscount/60aff13f7537b446b8be9602",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"items",
+						"removeOldestDiscount",
+						"60aff13f7537b446b8be9602"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getShoppingCarts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/shoppingCarts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"shoppingCarts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getShoppingCart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/shoppingCarts/60b16064edb08f4f04e8b36f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"shoppingCarts",
+						"60b16064edb08f4f04e8b36f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shoppingCarts/addItem",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"60b1587607ec1f1194b7c10b\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/shoppingCarts/addItem/60b16064edb08f4f04e8b36f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"shoppingCarts",
+						"addItem",
+						"60b16064edb08f4f04e8b36f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shoppingCarts/removeItem",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"60b1587607ec1f1194b7c10b\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/shoppingCarts/removeItem/60b16064edb08f4f04e8b36f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"shoppingCarts",
+						"removeItem",
+						"60b16064edb08f4f04e8b36f"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
